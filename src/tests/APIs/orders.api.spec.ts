@@ -40,15 +40,15 @@ describe('-Test orders endpoints:-', () => {
     testProduct: Product = {
       product_name: 'testProduct',
       price: 50,
+    },
+    testOrderProduct: Partial<OrderProduct> = {
+      quantity: 6,
+      product_id: 0,
     };
 
   let testOrder: Order = {
       status: 'active',
       user_id: 0,
-    },
-    testOrderProduct: Partial<OrderProduct> = {
-      quantity: 6,
-      product_id: 0,
     },
     testOrderWithLookup: FullOrderLookup | null,
     testAdminToken: string | null,

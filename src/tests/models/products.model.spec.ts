@@ -75,7 +75,7 @@ describe('-Test products model:-', () => {
         id: insertedTestProduct.id,
       });
       await expectAsync(promise).toBeResolved();
-      const result: Boolean = await promise;
+      const result: boolean = await promise;
       expect(result).toBeTrue();
     });
     it("--Should be resolved to false if product isn't exists in DB.", async () => {
@@ -83,7 +83,7 @@ describe('-Test products model:-', () => {
         product_name: 'Invalid',
       });
       await expectAsync(promise).toBeResolved();
-      const result: Boolean = await promise;
+      const result: boolean = await promise;
       expect(result).toBeFalse();
     });
   });

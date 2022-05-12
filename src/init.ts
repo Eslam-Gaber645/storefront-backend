@@ -19,14 +19,18 @@ function setInitializedMark(): void {
 }
 
 const rlInterface = readline.createInterface(process.stdin, process.stdout);
-const sendQuestion: Function = (
+
+type SendQuestion = (question: string, defaultVal?: string) => Promise<string>;
+
+const sendQuestion: SendQuestion = (
   question: string,
   defaultVal?: string
 ): Promise<string> =>
-  new Promise((resolve: Function): void =>
-    rlInterface.question(question, (answer: string): void =>
-      resolve(answer?.trim?.() || defaultVal)
-    )
+  new Promise(
+    (resolve: (resolve: string | PromiseLike<string>) => void): void =>
+      rlInterface.question(question, (answer: string): void =>
+        resolve((answer?.trim?.() || defaultVal) as string)
+      )
   );
 
 function sayHello(): void {
@@ -100,7 +104,7 @@ async function initEnvFile(): Promise<void> {
     },
   ];
 
-  let envContent: string = 'NODE_ENV="development"\n';
+  let envContent = 'NODE_ENV="development"\n';
 
   for (const { variable, description, defaultVal } of envVars) {
     const varValue = await sendQuestion(description, defaultVal);

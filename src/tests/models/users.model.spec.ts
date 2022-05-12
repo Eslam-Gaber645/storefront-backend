@@ -78,7 +78,7 @@ describe('-Test users model:-', () => {
         id: insertedTestUser.id,
       });
       await expectAsync(promise).toBeResolved();
-      const result: Boolean = await promise;
+      const result: boolean = await promise;
       expect(result).toBeTrue();
     });
     it("--Should be resolved to false if user isn't exists in DB.", async () => {
@@ -86,7 +86,7 @@ describe('-Test users model:-', () => {
         username: 'Invalid',
       });
       await expectAsync(promise).toBeResolved();
-      const result: Boolean = await promise;
+      const result: boolean = await promise;
       expect(result).toBeFalse();
     });
   });
