@@ -1,4 +1,4 @@
-# (Udacity) backend store
+# storefront-backend
 
 This project is for the Advanced Full-Stack Web Development Path provided by udacity.
 
@@ -52,7 +52,7 @@ Initialize app
 ```
 
 **\*Important\*** \
- Please make sure you entered the correct information in Initialize step.
+ Please make sure you entered the correct information in the Initialize step.
 
 ## Running Server
 
@@ -90,7 +90,7 @@ To run tests after the app was built
 | :----------- | :----------------------------------------- | :------------------------------------------ |
 | `clean`      | Remove build directory                     | .                                           |
 | `build`      | Build the app                              | Uses the `clean` task.                      |
-| `init`       | Initialize app after build it.             | You have to `build` the app first.          |
+| `init`       | Initialize app after build it              | You have to `build` the app first.          |
 | `test`       | Run app tests                              | You have to `build` & `init` the app first. |
 | `start`      | Start the server in production env.        | You have to `build` & `init` the app first. |
 | `start:dev`  | Start the dev server                       | Uses the `clean` task.                      |
@@ -102,7 +102,7 @@ To run tests after the app was built
 | `db:dev`     | To run development db-migrate commands     | Used by `init` task.                        |
 | `db:test`    | To run test db-migrate commands            | Used by `test`&`start:test` tasks.          |
 
-_Please note: You will not need to run `db:_` tasks because they are run automatically\*
+_Please note: You will not need to run `db:*` tasks because they are run automatically_
 
 ## Environment Variables
 
