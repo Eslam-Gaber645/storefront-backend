@@ -1,0 +1,27 @@
+{
+  "production": {
+    "driver": "pg",
+    "host": { "ENV": "PGHOST" },
+    "port": { "ENV": "PGPORT" },
+    "database": { "ENV": "PGDATABASE_PROD" },
+    "user": { "ENV": "PGUSER" },
+    "password": { "ENV": "PGPASSWORD" }
+  },
+  "development": {
+    "driver": "pg",
+    "host": { "ENV": "PGHOST" },
+    "port": { "ENV": "PGPORT" },
+    "database": { "ENV": "PGDATABASE_DEV" },
+    "user": { "ENV": "PGUSER" },
+    "password": { "ENV": "PGPASSWORD" }
+  },
+  "test": {
+    "driver": "pg",
+    "host": { "ENV": "PGHOST" },
+    "port": { "ENV": "PGPORT" },
+    "database": { "ENV": "PGDATABASE_TEST" },
+    "user": { "ENV": "PGUSER" },
+    "password": { "ENV": "PGPASSWORD" }
+  },
+  "sql-file": true
+}
