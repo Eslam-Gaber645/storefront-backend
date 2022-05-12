@@ -122,5 +122,5 @@ _Please note: You will not need to run `db:_` tasks because they are run automat
 
 ## API Requirements
 
-[**Database schema**](https://github.com/Eslam-Gaber645/storefront-backend/blob/master/REQUIREMENTS.md#Database+schema)\
-[**API Reference**](https://github.com/Eslam-Gaber645/storefront-backend/blob/master/REQUIREMENTS.md#API+Reference)
+[**Database schema**](https://github.com/Eslam-Gaber645/storefront-backend/blob/master/REQUIREMENTS.md#Database-schema)\
+[**API Reference**](https://github.com/Eslam-Gaber645/storefront-backend/blob/master/REQUIREMENTS.md#API-Reference)
