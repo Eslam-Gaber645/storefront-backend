@@ -22,8 +22,6 @@ export async function authorization(
         // using "authorize" service.
         authorization = await authorize(token);
 
-      if (!authorization) throw new HttpError(401, 'Authorization failure.');
-
       res.locals.auth = authorization;
 
       return next();
@@ -45,7 +43,10 @@ export function checkAuth(role: 'user' | 'admin' = 'user'): RequestHandler {
     res: Response,
     next: NextFunction
   ): void {
-    if (!res.locals.auth) return next(new HttpError(401, 'Login required.'));
+    if (res.locals.auth === null)
+      throw new HttpError(401, 'Authorization failure.');
+    else if (!res.locals.auth)
+      return next(new HttpError(401, 'Login required.'));
     else if (role === 'admin' && res.locals.auth.role !== 'admin')
       return next(new HttpError(403, 'Not allowed endpoint for your account.'));
 
